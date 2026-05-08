@@ -44,7 +44,7 @@ export default function Hero() {
               className="flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg border border-outline-variant hover:bg-surface-container-low transition-all"
             >
               <Play className="w-5 h-5 fill-current" />
-              Watch the Process
+              Learn the Process
             </a>
           </div>
         </motion.div>
@@ -58,7 +58,7 @@ export default function Hero() {
         >
           {/* Main Hero Image */}
           <img 
-            src="https://58webdesign.co.uk/artwork/poxyresin/6.png" 
+            src="https://i.ibb.co/hFR1HFQ3/ab570936-f208-4a3d-a982-171b3900e796.jpg" 
             alt="PoxyResin Artwork" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -67,7 +67,7 @@ export default function Hero() {
           {/* Floating badge */}
           <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur p-6 rounded-3xl shadow-xl border border-white/20 max-w-[220px]">
             <p className="text-xs font-bold text-primary uppercase tracking-tighter mb-1">Artist Spotlight</p>
-            <p className="text-sm font-medium text-zinc-800 italic leading-snug">"PoxyResin changed how I work. The flow is incredibly intuitive, allowing me to focus on the color."</p>
+            <p className="text-sm font-medium text-zinc-800 italic leading-snug">"There not too much that can go wrong with kit you just keep stirring until the mixture goes completely clear."</p>
           </div>
         </motion.div>
       </div>

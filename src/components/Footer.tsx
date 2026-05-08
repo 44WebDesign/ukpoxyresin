@@ -1,61 +1,65 @@
-import { Instagram, Twitter, Facebook, Mail } from 'lucide-react';
+import { Facebook, Instagram, ShoppingBag } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
+  const navLinks = [
+    { name: 'Shop', href: '#products' },
+    { name: 'Features', href: '#features' },
+    { name: 'Guides', href: '#process' },
+    { name: 'Reviews', href: '#testimonials' },
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: ShoppingBag, href: '#', label: 'Amazon' },
+  ];
+
   return (
-    <footer className="bg-surface pt-20 pb-10 px-6 md:px-12 border-t border-outline-variant/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-2 md:col-span-1">
-            <a href="/" className="text-2xl font-extrabold tracking-tighter resin-gradient-text block mb-6">
-              POXYRESIN
-            </a>
-            <p className="text-zinc-500 leading-relaxed max-w-[240px]">
-              Crafted for creators. Premium epoxy resins engineered for professional artistic results.
-            </p>
-          </div>
-          
-          <div>
-            <h5 className="font-black uppercase tracking-widest text-xs mb-6">Explore</h5>
-            <ul className="space-y-4">
-              <li><a href="#products" className="text-sm text-zinc-600 hover:text-primary transition-colors">Shop All</a></li>
-              <li><a href="#features" className="text-sm text-zinc-600 hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#process" className="text-sm text-zinc-600 hover:text-primary transition-colors">Safety Guides</a></li>
-              <li><a href="#testimonials" className="text-sm text-zinc-600 hover:text-primary transition-colors">Expert Reviews</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-black uppercase tracking-widest text-xs mb-6">Company</h5>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-sm text-zinc-600 hover:text-primary transition-colors">Our Story</a></li>
-              <li><a href="#" className="text-sm text-zinc-600 hover:text-primary transition-colors">Wholesale</a></li>
-              <li><a href="#" className="text-sm text-zinc-600 hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-sm text-zinc-600 hover:text-primary transition-colors">Terms of Service</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-black uppercase tracking-widest text-xs mb-6">Connect</h5>
-            <div className="flex gap-4 mb-6">
-              <a href="#" className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all"><Mail className="w-5 h-5" /></a>
-            </div>
-            <p className="text-sm text-zinc-500">support@poxyresin.com</p>
-          </div>
-        </div>
+    <footer className="bg-surface pt-24 pb-12 px-6 border-t border-outline-variant/30">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+        <a href="/" className="text-4xl font-extrabold tracking-tighter resin-gradient-text block mb-8">
+          POXYRESIN
+        </a>
         
-        <div className="pt-10 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-zinc-400 font-medium uppercase tracking-widest">
-            © {currentYear} PoxyResin. Crafted for creators.
+        <p className="text-zinc-500 leading-relaxed max-w-sm mb-12 text-sm italic">
+          "Crafted for the chaotic beauty of the artist's studio. Premium epoxy resins engineered for professional artistic results."
+        </p>
+
+        <nav className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
+          {navLinks.map((link) => (
+            <a 
+              key={link.name} 
+              href={link.href}
+              className="text-xs font-black uppercase tracking-widest text-zinc-600 hover:text-primary transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex justify-center gap-6 mb-16">
+          {socialLinks.map((social) => (
+            <a 
+              key={social.label} 
+              href={social.href} 
+              className="w-12 h-12 rounded-2xl bg-zinc-100 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all shadow-sm"
+              aria-label={social.label}
+            >
+              <social.icon className="w-5 h-5" />
+            </a>
+          ))}
+        </div>
+
+        <div className="w-full pt-10 border-t border-outline-variant/20 flex flex-col items-center gap-6">
+          <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.3em]">
+            © {currentYear} POXYRESIN. ALL RIGHTS RESERVED.
           </p>
-          <div className="flex gap-8">
-            <span className="text-xs text-zinc-300 font-bold uppercase tracking-[0.2em]">Crystal Clear</span>
-            <span className="text-xs text-zinc-300 font-bold uppercase tracking-[0.2em]">Bubble Free</span>
-            <span className="text-xs text-zinc-300 font-bold uppercase tracking-[0.2em]">UV Proof</span>
+          <div className="flex flex-wrap justify-center gap-8">
+            <span className="text-[9px] text-zinc-300 font-black uppercase tracking-widest">Crystal Clear</span>
+            <span className="text-[9px] text-zinc-300 font-black uppercase tracking-widest">Bubble Free</span>
+            <span className="text-[9px] text-zinc-300 font-black uppercase tracking-widest">UV Proof</span>
           </div>
         </div>
       </div>

@@ -48,10 +48,7 @@ export default function Features() {
               Crystal Clear Epoxy Resin – Deep pour, bubble-free formula for glass-like clarity. Ideal for art, tables, casting and flower preservation projects.
             </p>
           </div>
-          <a href="#products" className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all uppercase tracking-widest text-sm">
-            View All Specs <ArrowRight className="w-5 h-5" />
-          </a>
-        </div>
+                 </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
@@ -68,11 +65,6 @@ export default function Features() {
               </div>
               <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">{feature.title}</h3>
               <p className="text-zinc-600 leading-relaxed mb-6">{feature.description}</p>
-              {feature.href && (
-                <a href={feature.href} className="text-sm font-bold text-primary inline-flex items-center gap-1 hover:gap-2 transition-all uppercase tracking-widest">
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </a>
-              )}
             </motion.div>
           ))}
         </div>

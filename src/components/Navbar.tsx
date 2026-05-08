@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, ShoppingBag } from 'lucide-react';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,6 +22,12 @@ export default function Navbar() {
     { name: 'Features', href: '#features' },
     { name: 'Guides', href: '#process' },
     { name: 'Reviews', href: '#testimonials' },
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: ShoppingBag, href: '#', label: 'Amazon' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -59,7 +65,7 @@ export default function Navbar() {
             {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
 
-          <div className="hidden md:flex items-center gap-8 mr-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -69,6 +75,20 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+
+            <div className="flex items-center gap-4 px-6 border-l border-zinc-200">
+              {socialLinks.map((social) => (
+                <a 
+                  key={social.label} 
+                  href={social.href}
+                  className="text-zinc-400 hover:text-primary transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+
             <a 
               href="#signup" 
               className="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95"
@@ -100,10 +120,23 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+
+              <div className="flex items-center justify-center gap-8 py-8 border-y border-zinc-100 w-full mb-4">
+                {socialLinks.map((social) => (
+                  <a 
+                    key={social.label} 
+                    href={social.href} 
+                    className="text-zinc-400 hover:text-primary transition-colors"
+                  >
+                    <social.icon className="w-8 h-8" />
+                  </a>
+                ))}
+              </div>
+
               <a 
                 href="#signup" 
                 onClick={(e) => handleLinkClick(e, '#signup')}
-                className="mt-6 bg-primary text-white px-10 py-5 rounded-3xl font-black text-xl shadow-2xl shadow-primary/20"
+                className="bg-primary text-white px-10 py-5 rounded-3xl font-black text-xl shadow-2xl shadow-primary/20"
               >
                 CONTACT US
               </a>

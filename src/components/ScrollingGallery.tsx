@@ -2,12 +2,12 @@ import { motion } from 'motion/react';
 
 export default function ScrollingGallery() {
   const images = [
-    'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1569350736152-78d103f6f966?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1550684376-efcbd6e3f031?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&q=80&w=800',
+    'https://i.ibb.co/XryLymYz/ed0b44d2-ae6b-4ab9-808a-1e43f79ee7d4.jpg',
+    'https://i.ibb.co/Ng4Dsg4s/ec275a88-6429-4ba8-8188-b331e57d2b04.jpg',
+    'https://i.ibb.co/bRyCsFYd/1d367a30-ebcf-42e7-b27b-6b3fbd6c5124.jpg',
+    'https://i.ibb.co/hFR1HFQ3/ab570936-f208-4a3d-a982-171b3900e796.jpg',
+    'https://i.ibb.co/FqmTdJB8/IMG-8510.jpg',
+    'https://i.ibb.co/KxM6Rfvg/16b19110-0d42-4dbc-b96d-3171fc0c0494.jpg',
   ];
 
   // Double the images to create seamless infinite scroll
@@ -22,7 +22,7 @@ export default function ScrollingGallery() {
             x: ['0%', '-50%'],
           }}
           transition={{
-            duration: 15,
+            duration: 40,
             ease: 'linear',
             repeat: Infinity,
           }}

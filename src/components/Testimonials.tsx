@@ -4,21 +4,21 @@ import { Star, Quote } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Elena Rossi",
-      role: "Fluid Artist",
-      content: "PoxyResin changed how I work. The flow is incredibly intuitive, allowing me to focus on the color, not the bubbles.",
+      name: "Steve Brown",
+      role: "Very easy to work with",
+      content: "There not too much that can go wrong with kit you just keep stirring until the mixture goes completely clear. It is nice to pour, I would describe it as 'goldilocks' not too running and not too thick.",
       rating: 5
     },
     {
-      name: "Marcus Thorne",
-      role: "Woodworker",
-      content: "Best river table resin I've used. Heat resistance is top-tier and the clarity is unmatched.",
+      name: "KP",
+      role: "Epoxy Resin Kit For Beginners",
+      content: "This is a good epoxy resin kit. Very easy 1:1 mix. Has a pot life of about 40 minutes so you can take your time with your work, before leaving it 24 hours to completely cure.",
       rating: 5
     },
     {
-      name: "Sarah Jenkins",
-      role: "Jewelry Maker",
-      content: "Finally, a resin that doesn't smell like a chemical factory. Safe, clear, and perfectly hard.",
+      name: "Mike B",
+      role: "Comprehensive kit.",
+      content: "Nice resin in a kit that gives most of what you need, bar a mould. Easy to mix and cures relatively quickly, bubble free (if done when it's warm) and very clear. Can't fault it and a competitive price too.",
       rating: 5
     }
   ];
@@ -32,7 +32,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6 uppercase">
-            Trusted by <span className="resin-gradient-text">50,000+</span> Creators
+            Trusted by <span className="resin-gradient-text">OUR</span> Creators
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
             The big Resin brands are great.<br className="hidden md:block" />

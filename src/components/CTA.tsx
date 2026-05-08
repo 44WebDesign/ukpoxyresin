@@ -20,7 +20,7 @@ export default function CTA() {
             <span className="text-tertiary-fixed">masterpiece?</span>
           </h2>
           <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join 50,000+ creators using PoxyResin to bring their visions to life. Sign up for our newsletter for tips, tricks, and early access to drops.
+            Join our customers and use PoxyResin to bring your visions to life. Sign up for our newsletter for tips, tricks, and early access to drops.
           </p>
           
           <form className="flex flex-col sm:flex-row items-center gap-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
@@ -29,7 +29,7 @@ export default function CTA() {
               placeholder="Enter your email" 
               className="w-full px-6 py-4 rounded-2xl bg-white text-zinc-900 font-medium focus:ring-4 focus:ring-tertiary-fixed/50 outline-none transition-all shadow-xl"
             />
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-zinc-800 transition-all shadow-xl active:scale-95">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-zinc-800 transition-all shadow-xl active:scale-95 whitespace-nowrap">
               Sign Up
               <Send className="w-4 h-4" />
             </button>
