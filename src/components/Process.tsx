@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 
 export default function Process() {
+  const [shouldPlay, setShouldPlay] = useState(false);
   const steps = [
     { title: "Prep Your Canvas", text: "Clean surfaces and prepare your molds for a flawless cast." },
     { title: "Perfect Ratio", text: "Mix 1:1 by volume. Stir slowly for 3 minutes to avoid micro-bubbles." },
@@ -20,7 +22,7 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
           {steps.map((step, idx) => (
             <motion.div 
               key={step.title}
@@ -42,6 +44,23 @@ export default function Process() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          onViewportEnter={() => setShouldPlay(true)}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="max-w-4xl mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/10 border border-outline-variant/30 aspect-video bg-zinc-100"
+        >
+          <iframe
+            src={`https://player.vimeo.com/video/1190579041?title=0&byline=0&portrait=0&badge=0&controls=1${shouldPlay ? '&autoplay=1&muted=1' : ''}`}
+            title="PoxyResin Process Video"
+            className="w-full h-full"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </motion.div>
       </div>
     </section>
   );

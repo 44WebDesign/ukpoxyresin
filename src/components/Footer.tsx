@@ -17,10 +17,15 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-surface pt-24 pb-12 px-6 border-t border-outline-variant/30">
+    <footer className="bg-white pt-24 pb-12 px-6 border-t border-outline-variant/30">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <a href="/" className="text-4xl font-extrabold tracking-tighter resin-gradient-text block mb-8">
-          POXYRESIN
+        <a href="/" className="block mb-8">
+          <img 
+            src="https://i.ibb.co/vCH9YQpj/18f04a49-006e-4bef-a585-7dc0d583927c.jpg" 
+            alt="POXYRESIN" 
+            className="h-24 md:h-32 w-auto object-contain mx-auto"
+            referrerPolicy="no-referrer"
+          />
         </a>
         
         <p className="text-zinc-500 leading-relaxed max-w-sm mb-12 text-sm italic">

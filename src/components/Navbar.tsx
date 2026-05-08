@@ -47,9 +47,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 h-20 z-50 glass-nav border-b border-outline-variant/20 px-4 flex items-center justify-between flex-nowrap">
-        <a href="/" className="text-xl font-extrabold tracking-tighter resin-gradient-text shrink-0 mr-4">
-          POXYRESIN
+      <nav className="fixed top-0 left-0 right-0 h-20 z-50 bg-white border-b border-outline-variant/20 px-4 flex items-center justify-between flex-nowrap">
+        <a href="/" className="shrink-0 mr-4">
+          <img 
+            src="https://i.ibb.co/vCH9YQpj/18f04a49-006e-4bef-a585-7dc0d583927c.jpg" 
+            alt="POXYRESIN" 
+            className="h-12 md:h-16 w-auto object-contain"
+            referrerPolicy="no-referrer"
+          />
         </a>
         
         <div className="flex items-center gap-2 shrink-0">
