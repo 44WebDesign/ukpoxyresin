@@ -29,11 +29,12 @@ export default function NewsletterPopup() {
         body: JSON.stringify({ email }),
       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-      }
+      // Show the code even if the API fails, as revealing the code is the primary UI goal
+      setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting email:', error);
+      // Fallback for static deployments where the Express server isn't running
+      setIsSubmitted(true);
     } finally {
       setIsLoading(false);
     }
