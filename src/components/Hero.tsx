@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-zinc-600 max-w-xl mb-10 leading-relaxed">
-            Premium, crystal-clear epoxy engineered for artists. Deep pour, UV resistant, and zero VOC. Unleash your creativity with PoxyResin.
+            Premium, crystal-clear epoxy engineered for artists. Deep pour, UV resistant, and zero VOC. Unleash your creativity with PoxyResin
           </p>
           
           <div className="flex flex-wrap gap-4">
