@@ -24,7 +24,8 @@ export default function ScrollingGallery() {
     'https://i.ibb.co/N20xVh60/Poxy-Resin-Epoxy-Resin-Kit-Block-05-1.jpg',
     'https://i.ibb.co/5W5dX0V9/Poxy-Resin-Epoxy-Resin-Kit-4-L-Block-04.jpg',
     'https://i.ibb.co/JjnZmC77/Poxy-Resin-Epoxy-Resin-Kit-1-L-Block-08.jpg',
-    'https://i.ibb.co/LDG5QYg0/Poxy-Resin-Epoxy-Resin-Kit-1-L-Block-04.jpg'
+    'https://i.ibb.co/LDG5QYg0/Poxy-Resin-Epoxy-Resin-Kit-1-L-Block-04.jpg',
+    'https://i.ibb.co/2095BkGM/fcf3131b-c5ba-40b7-a04c-6a451053267a.jpg'
   ];
 
   // Double the images to create seamless infinite scroll
