@@ -9,16 +9,16 @@ export default function ProductShowcase() {
       description: "Clear Casting Resin With Hardener.",
       price: "59.99",
       tag: "Best Seller",
-      image: "https://i.ibb.co/KxM6Rfvg/16b19110-0d42-4dbc-b96d-3171fc0c0494.jpg",
+      image: "https://i.ibb.co/2095BkGM/fcf3131b-c5ba-40b7-a04c-6a451053267a.jpg",
       href: "https://www.amazon.co.uk/Beginners-Bubble-Resistant-Casting-Hardener/dp/B0DNND78T6/ref=cm_cr_arp_d_product_top?ie=UTF8&th=1"
     },
     {
       id: 2,
-      name: "2L Resin Kit",
+      name: "1L Resin Kit",
       description: "UV Resistant, 35 Minute Work Time.",
       price: "24.99",
       tag: "Top Rated",
-      image: "https://i.ibb.co/2095BkGM/fcf3131b-c5ba-40b7-a04c-6a451053267a.jpg",
+      image: "https://i.ibb.co/bRyCsFYd/1d367a30-ebcf-42e7-b27b-6b3fbd6c5124.jpg",
       href: "https://www.amazon.co.uk/Beginners-Bubble-Resistant-Casting-Hardener/dp/B0DPLB464Y/ref=sxbs_pa_sp_search_thematic_btf_sspa?content-id=amzn1.sym.a038aee5-065e-4f25-8b5a-583571e2cf5e%3Aamzn1.sym.a038aee5-065e-4f25-8b5a-583571e2cf5e&crid=VZEOKJHPPJD3&cv_ct_cx=epoxy%2Bresin%2B1l&keywords=epoxy%2Bresin%2B1l&pd_rd_i=B0DPLB464Y&pd_rd_r=ca4c8768-cf72-47d6-b0ac-04741da69180&pd_rd_w=kPixQ&pd_rd_wg=9SHHN&pf_rd_p=a038aee5-065e-4f25-8b5a-583571e2cf5e&pf_rd_r=SRGNDJYX7KZZ47WDT8X4&qid=1778237370&s=industrial&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=poxyresin%2B1l%2Cindustrial%2C89&sr=1-1-f69b411d-a7a3-463c-b3ca-202c5f7feb80-spons&aref=vDN047DtCm&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm&th=1"
     }
   ];
