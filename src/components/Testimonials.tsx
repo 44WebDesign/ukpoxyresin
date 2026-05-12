@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 
 export default function Testimonials() {
@@ -35,8 +35,8 @@ export default function Testimonials() {
             Trusted by <span className="resin-gradient-text">OUR</span> Creators
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-            The big Resin brands are great.<br className="hidden md:block" />
-            We know - we use the same supplier.<br className="hidden md:block" />
+            The big Resin brands are great.<br />
+            We know - we use the same supplier.<br />
             Skip the Brand tax and get the same quality resin for less.
           </p>
         </div>

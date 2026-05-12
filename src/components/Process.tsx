@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export default function Process() {
   const [shouldPlay, setShouldPlay] = useState(false);

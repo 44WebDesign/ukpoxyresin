@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Sparkles, ShieldCheck, Zap, Layers, MousePointer2, ArrowRight, Droplets } from 'lucide-react';
 
 export default function Features() {
