@@ -21,46 +21,47 @@ const getResend = () => {
   return resendClient;
 };
 
+const app = express();
+
+app.use(express.json());
+
+// API Route for newsletter
+app.post("/api/newsletter", async (req, res) => {
+  const { email } = req.body;
+  const contactEmail = process.env.CONTACT_EMAIL || "contact@poxyuk.co.uk";
+  
+  if (!email) {
+    return res.status(400).json({ error: "Email is required" });
+  }
+
+  console.log(`[NEWSLETTER SUBSCRIPTION]: New subscription from ${email}`);
+  
+  const resend = getResend();
+  if (resend) {
+    try {
+      await resend.emails.send({
+        from: "PoxyResin <onboarding@resend.dev>", // Note: Custom domains require setup in Resend
+        to: contactEmail,
+        subject: "New PoxyResin Subscriber",
+        html: `
+          <h1>New Subscriber Alert!</h1>
+          <p><strong>Email:</strong> ${email}</p>
+          <p>This user has just signed up for the 20% discount code via the website.</p>
+        `,
+      });
+      console.log(`Email sent successfully to ${contactEmail}`);
+    } catch (error) {
+      console.error("Error sending email via Resend:", error);
+    }
+  } else {
+    console.log(`[SIMULATED EMAIL TO ${contactEmail}]: New PoxyResin Subscriber - ${email} signed up for discount code.`);
+  }
+
+  res.json({ success: true, message: "Subscription received" });
+});
+
 async function startServer() {
-  const app = express();
   const PORT = 3000;
-
-  app.use(express.json());
-
-  // API Route for newsletter
-  app.post("/api/newsletter", async (req, res) => {
-    const { email } = req.body;
-    const contactEmail = process.env.CONTACT_EMAIL || "contact@poxyuk.co.uk";
-    
-    if (!email) {
-      return res.status(400).json({ error: "Email is required" });
-    }
-
-    console.log(`[NEWSLETTER SUBSCRIPTION]: New subscription from ${email}`);
-    
-    const resend = getResend();
-    if (resend) {
-      try {
-        await resend.emails.send({
-          from: "PoxyResin <onboarding@resend.dev>", // Note: Custom domains require setup in Resend
-          to: contactEmail,
-          subject: "New PoxyResin Subscriber",
-          html: `
-            <h1>New Subscriber Alert!</h1>
-            <p><strong>Email:</strong> ${email}</p>
-            <p>This user has just signed up for the 20% discount code via the website.</p>
-          `,
-        });
-        console.log(`Email sent successfully to ${contactEmail}`);
-      } catch (error) {
-        console.error("Error sending email via Resend:", error);
-      }
-    } else {
-      console.log(`[SIMULATED EMAIL TO ${contactEmail}]: New PoxyResin Subscriber - ${email} signed up for discount code.`);
-    }
-
-    res.json({ success: true, message: "Subscription received" });
-  });
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
@@ -77,9 +78,14 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
+  // Only listen if not running as a Vercel function
+  if (process.env.VERCEL !== "1") {
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  }
 }
 
 startServer();
+
+export default app;
