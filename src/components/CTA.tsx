@@ -6,12 +6,24 @@ export default function CTA() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      setIsSubmitted(true);
-      // Simulate API call
-      console.log('Newsletter signup:', email);
+      try {
+        const response = await fetch('/api/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        
+        if (response.ok) {
+          setIsSubmitted(true);
+        } else {
+          console.error('Signup failed');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
   };
 
